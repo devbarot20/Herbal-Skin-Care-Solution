@@ -1,0 +1,16 @@
+﻿--- Page 1 ---
+PS Code: 118
+ò
+Problem Statement Title: Herbal Skin Care Solution
+ò
+Team Name: HerbHacks
+ò
+Team Leader Name: Savan Anilbhai Patel
+ò
+Institute Name: Madhuben & Bhanubhai Institute Of Technology
+Category Number and Name: Track 1 û Life Science and Agriculture
+Basic Details of the Team and Problem 
+Statement
+
+--- Page 2 ---
+Error reading PDF: 'charmap' codec can't encode character '\uf0d8' in position 275: character maps to <undefined>

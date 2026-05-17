@@ -1,0 +1,11 @@
+backend/skin/
+frontend/node_modules/
+node_modules/
+.env
+__pycache__/
+*.pyc
+backend/venv/
+backend/temp/
+backend/*.db
+frontend/.vite/
+data/
