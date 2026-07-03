@@ -82,12 +82,11 @@ def predict_skin_type(img_path, validate_skin: bool = False):
     
     try:
         # --- SAFEGUARD: Face detection for uploaded images FIRST (before cache) ---
-        if validate_skin:
-            if not is_face_image(img_path):
-                return {
-                    "error": "Invalid image. Please upload a clear image of human facial skin."
-                }
+        # Removed strict MTCNN face check to allow close-up skin patch uploads
+        # which often fail face detection because they lack full facial features (eyes/nose).
+        # OCR check below will still catch documents/labels.
         # --- END FACE CHECK ---
+
 
         # Check cache to guarantee identical results for the same image (Deterministic Requirement)
         with open(img_path, 'rb') as f:

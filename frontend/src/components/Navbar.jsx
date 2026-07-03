@@ -73,15 +73,15 @@ export default function Navbar() {
 
                 {user ? (
                     <div className="flex items-center gap-3">
-                        {/* User Avatar + Name */}
-                        <div className="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-herbal-accent/10 border border-herbal-accent/20">
+                        {/* User Avatar + Name (Clickable link to Dashboard) */}
+                        <Link to="/dashboard" className="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-herbal-accent/10 border border-herbal-accent/20 hover:bg-herbal-accent/20 transition-colors cursor-pointer">
                             <div className="w-7 h-7 rounded-lg bg-herbal-accent flex items-center justify-center text-herbal-dark font-black text-xs">
                                 {initials}
                             </div>
                             <span className="text-sm font-bold text-herbal-light/80 max-w-[120px] truncate">
                                 {user.name}
                             </span>
-                        </div>
+                        </Link>
                         {/* Logout */}
                         <button
                             onClick={handleLogout}
