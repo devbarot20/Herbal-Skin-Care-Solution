@@ -6,7 +6,6 @@ os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 warnings.filterwarnings("ignore")
 logging.getLogger("tensorflow").setLevel(logging.ERROR)
 import tensorflow as tf
-tf.get_logger().setLevel("ERROR")
 
 import shutil
 import base64

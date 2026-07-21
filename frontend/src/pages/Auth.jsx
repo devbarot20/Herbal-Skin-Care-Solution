@@ -32,35 +32,56 @@ export default function Auth() {
 
         try {
             if (tab === 'login') {
-                const { error: signInErr } = await supabase.auth.signInWithPassword({
+                const { data, error: signInErr } = await supabase.auth.signInWithPassword({
                     email: form.email,
                     password: form.password,
                 });
 
-                if (signInErr) throw signInErr;
-                setSuccess(`Welcome back!`);
-                setTimeout(() => navigate('/'), 800);
+                if (signInErr) {
+                    // Provide friendlier messages for common errors
+                    if (signInErr.message?.toLowerCase().includes('invalid login')) {
+                        throw new Error('Incorrect email or password. Please try again.');
+                    }
+                    if (signInErr.message?.toLowerCase().includes('email not confirmed')) {
+                        throw new Error('Please verify your email before signing in. Check your inbox for a confirmation link.');
+                    }
+                    throw signInErr;
+                }
+
+                if (data?.session) {
+                    setSuccess(`Welcome back!`);
+                    setTimeout(() => navigate('/'), 800);
+                } else {
+                    // Shouldn't normally happen, but guard against it
+                    throw new Error('Login failed. Please try again.');
+                }
             } else {
-                // Register
+                // Register — user metadata (name) is stored in auth.users.raw_user_meta_data
+                // A DB trigger (handle_new_user) should sync it to public.users automatically.
                 const { data, error: signUpErr } = await supabase.auth.signUp({
                     email: form.email,
                     password: form.password,
                     options: { data: { name: form.name } }
                 });
 
-                if (signUpErr) throw signUpErr;
-
-                // Sync the new user into the public `users` table
-                if (data?.user) {
-                    await supabase.from('users').upsert({
-                        id: data.user.id,
-                        email: data.user.email,
-                        name: form.name,
-                    }, { onConflict: 'id' });
+                if (signUpErr) {
+                    if (signUpErr.message?.toLowerCase().includes('already registered')) {
+                        throw new Error('This email is already registered. Try signing in instead.');
+                    }
+                    throw signUpErr;
                 }
 
-                setSuccess(`Account created! Welcome, ${form.name}!`);
-                setTimeout(() => navigate('/'), 800);
+                // Check if Supabase requires email confirmation
+                if (data?.user && !data?.session) {
+                    // Email confirmation is enabled — user must verify before logging in
+                    setSuccess(`Account created! A confirmation link has been sent to ${form.email}. Please check your inbox to verify your account.`);
+                } else if (data?.session) {
+                    // Email confirmation is disabled — user is logged in immediately
+                    setSuccess(`Account created! Welcome, ${form.name || form.email}!`);
+                    setTimeout(() => navigate('/'), 1000);
+                } else {
+                    throw new Error('Something went wrong during sign-up. Please try again.');
+                }
             }
         } catch (err) {
             setError(err.message || 'Something went wrong. Please try again.');
