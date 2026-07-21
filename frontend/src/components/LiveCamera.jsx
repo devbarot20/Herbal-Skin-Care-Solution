@@ -85,7 +85,8 @@ export default function LiveCamera({ onResult, token }) {
             const base64Image = canvas.toDataURL('image/jpeg');
 
             // 3. Send to FastAPI /predict-frame
-            const res = await fetch('http://localhost:5001/predict-frame', {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+            const res = await fetch(`${API_URL}/predict-frame`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

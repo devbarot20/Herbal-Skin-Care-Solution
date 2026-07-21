@@ -32,7 +32,8 @@ export default function IngredientScanner() {
         formData.append('image', image);
 
         try {
-            const res = await axios.post('http://localhost:5001/scan-ingredients', formData);
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+            const res = await axios.post(`${API_URL}/scan-ingredients`, formData);
             if (res.data.error) {
                 alert(res.data.error);
             } else {
