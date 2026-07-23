@@ -3,7 +3,6 @@
   "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
   "installCommand": "cd frontend && npm install",
-  "framework": "vite",
   "rewrites": [
     {
       "source": "/(.*)",
@@ -41,11 +40,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "VITE_SUPABASE_URL": "https://dsnzxbtilooyuumpnyzv.supabase.co",
-    "VITE_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzbnp4YnRpbG9veXV1bXBueXp2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MzA0OTA3MiwiZXhwIjoyMDk4NjI1MDcyfQ.q9XpUF_RGMYVFEN9YOcC3ivpCjw38clpZsePgyBPkpw",
-    "VITE_API_URL": "https://herbhex-ai-backend.vercel.app",
-    "VITE_AUTH_DOMAIN": "dswyzzjbyupdngfngpyc.supabase.co"
-  }
+  ]
 }
