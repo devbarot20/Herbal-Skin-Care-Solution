@@ -71,6 +71,11 @@ export default function Auth() {
                     throw signUpErr;
                 }
 
+                // Check if email is already registered (Supabase returns empty identities array for existing users)
+                if (data?.user && data?.user?.identities?.length === 0) {
+                    throw new Error('This email is already registered. Please switch to "Sign In" to log into your account.');
+                }
+
                 // Check if Supabase requires email confirmation
                 if (data?.user && !data?.session) {
                     // Email confirmation is enabled — user must verify before logging in
