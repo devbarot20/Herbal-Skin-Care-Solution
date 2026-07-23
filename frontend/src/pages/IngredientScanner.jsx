@@ -5,6 +5,7 @@ import {
     ChevronDown, ChevronUp
 } from 'lucide-react';
 import axios from 'axios';
+import { getApiUrl } from '../config';
 
 export default function IngredientScanner() {
     const [image, setImage] = useState(null);
@@ -32,8 +33,7 @@ export default function IngredientScanner() {
         formData.append('image', image);
 
         try {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
-            const res = await axios.post(`${API_URL}/scan-ingredients`, formData);
+            const res = await axios.post(`${getApiUrl()}/scan-ingredients`, formData);
             if (res.data.error) {
                 alert(res.data.error);
             } else {

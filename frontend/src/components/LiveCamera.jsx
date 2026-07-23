@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Camera, RefreshCw, CheckCircle2 } from 'lucide-react';
 import { FaceDetector, FilesetResolver } from '@mediapipe/tasks-vision';
 import { supabase } from '../supabaseClient';
+import { getApiUrl } from '../config';
 
 export default function LiveCamera({ onResult, token }) {
     const videoRef = useRef(null);
@@ -99,11 +100,10 @@ export default function LiveCamera({ onResult, token }) {
             const base64Image = canvas.toDataURL('image/jpeg', 0.75);
 
             // 3. Send to FastAPI /predict-frame with 25s timeout
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 25000);
 
-            const res = await fetch(`${API_URL}/predict-frame`, {
+            const res = await fetch(`${getApiUrl()}/predict-frame`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

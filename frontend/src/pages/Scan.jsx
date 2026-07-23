@@ -6,6 +6,7 @@ import {
     Info, AlertCircle, ChevronRight, Save, MapPin, History, ShoppingBag
 } from 'lucide-react';
 import axios from 'axios';
+import { getApiUrl } from '../config';
 import LiveCamera from '../components/LiveCamera';
 import { useAuth } from '../context/AuthContext';
 import ProductCard from '../components/ProductCard';
@@ -66,8 +67,7 @@ export default function Scan() {
         const fetchProducts = async () => {
             setProductsLoading(true);
             try {
-                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
-                const res = await axios.get(`${API_URL}/products/${result.skin_type}`);
+                const res = await axios.get(`${getApiUrl()}/products/${result.skin_type}`);
                 setProducts(res.data || []);
             } catch (err) {
                 console.warn('Could not load product recommendations:', err);
@@ -97,8 +97,7 @@ export default function Scan() {
         formData.append('image', image);
 
         try {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
-            const res = await axios.post(`${API_URL}/predict`, formData, {
+            const res = await axios.post(`${getApiUrl()}/predict`, formData, {
                 headers: token ? { Authorization: `Bearer ${token}` } : {}
             });
             setResult(res.data);
