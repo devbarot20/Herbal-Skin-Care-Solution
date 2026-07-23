@@ -59,8 +59,22 @@ export default function LiveCamera({ onResult, token }) {
 
         const canvas = canvasRef.current;
         const video = videoRef.current;
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
+
+        // Optimize resolution: Scale down large camera feeds to max 640px to speed up network payload
+        const maxDim = 640;
+        let w = video.videoWidth || 640;
+        let h = video.videoHeight || 480;
+        if (w > maxDim || h > maxDim) {
+            if (w > h) {
+                h = Math.round((h * maxDim) / w);
+                w = maxDim;
+            } else {
+                w = Math.round((w * maxDim) / h);
+                h = maxDim;
+            }
+        }
+        canvas.width = w;
+        canvas.height = h;
 
         const ctx = canvas.getContext('2d');
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -81,33 +95,42 @@ export default function LiveCamera({ onResult, token }) {
                 return;
             }
 
-            // 2. Convert canvas to base64 for the endpoint
-            const base64Image = canvas.toDataURL('image/jpeg');
+            // 2. Convert canvas to compressed base64 JPEG (75% quality)
+            const base64Image = canvas.toDataURL('image/jpeg', 0.75);
 
-            // 3. Send to FastAPI /predict-frame
+            // 3. Send to FastAPI /predict-frame with 25s timeout
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 25000);
+
             const res = await fetch(`${API_URL}/predict-frame`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 },
-                body: JSON.stringify({ image: base64Image })
+                body: JSON.stringify({ image: base64Image }),
+                signal: controller.signal
             });
+            clearTimeout(timeoutId);
+
+            if (!res.ok) {
+                throw new Error(`Server returned status ${res.status}`);
+            }
 
             const result = await res.json();
-
-            // Note: Background Supabase storage handling and history saving is done by main.py
-
-            // 5. Return results to parent
             onResult(result);
         } catch (err) {
             console.error("Frame analysis failed:", err);
+            const msg = err.name === 'AbortError'
+                ? 'Server response timed out. The backend server might be starting up (Render free tier sleeps after 15 minutes of inactivity). Please try again in a few seconds.'
+                : `Analysis failed (${err.message || 'Network error'}). Make sure the backend server is running.`;
+            alert(msg);
             setCaptured(false); // allow retry
         } finally {
             setIsAnalyzing(false);
         }
-    }, [isAnalyzing, captured, onResult]);
+    }, [isAnalyzing, captured, onResult, token]);
 
     // Face detection loop
     const detectFaces = useCallback(async () => {

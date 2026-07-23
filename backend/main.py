@@ -87,7 +87,7 @@ os.makedirs(TEMP_DIR, exist_ok=True)
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:5174", "http://127.0.0.1:5173"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -225,7 +225,7 @@ async def predict_frame(data: Base64Image, authorization: Optional[str] = Header
         with open(temp_path, "wb") as f:
             f.write(img_bytes)
 
-        result = predict_skin_type(temp_path)
+        result = predict_skin_type(temp_path, is_live_frame=True)
 
         # Schedule Supabase save in background — does NOT block the response
         user_id = get_user_id_from_token(authorization)
