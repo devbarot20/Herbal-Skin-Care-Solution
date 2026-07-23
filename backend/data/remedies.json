@@ -1,0 +1,149 @@
+{
+    "acne": {
+        "description": "Acne-prone skin often has breakouts, inflammation, and excess oil.",
+        "remedies": [
+            {
+                "name": "Neem & Turmeric Paste",
+                "benefit": "Anti-bacterial and anti-inflammatory."
+            },
+            {
+                "name": "Tea Tree Oil",
+                "benefit": "Natural antiseptic to kill acne-causing bacteria."
+            },
+            {
+                "name": "Aloe Vera Gel",
+                "benefit": "Soothes redness and heals scars."
+            }
+        ],
+        "tips": [
+            "Avoid touching your face.",
+            "Use non-comedogenic products."
+        ]
+    },
+    "normal": {
+        "description": "Normal skin is balanced, neither too oily nor too dry.",
+        "remedies": [
+            {
+                "name": "Rose Water Mist",
+                "benefit": "Hydrates and maintains pH balance."
+            },
+            {
+                "name": "Sandalwood & Honey Mask",
+                "benefit": "Maintains natural glow and softness."
+            },
+            {
+                "name": "Cucumber Slices",
+                "benefit": "Cooling effect and mild hydration."
+            }
+        ],
+        "tips": [
+            "Cleanse twice a day.",
+            "Wear sunscreen daily."
+        ]
+    },
+    "oily": {
+        "description": "Oily skin has enlarged pores and a shiny appearance due to excess sebum.",
+        "remedies": [
+            {
+                "name": "Multani Mitti (Fuller's Earth)",
+                "benefit": "Absorbs excess oil and tightens pores."
+            },
+            {
+                "name": "Lemon Juce & Honey",
+                "benefit": "Astringent properties to reduce oiliness."
+            },
+            {
+                "name": "Gram Flour (Besan) Scrub",
+                "benefit": "Natural cleanser that removes grease."
+            }
+        ],
+        "tips": [
+            "Use oil-free moisturizers.",
+            "Exfoliate once a week."
+        ]
+    },
+    "eczema": {
+        "description": "Eczema (Atopic Dermatitis) causes dry, itchy, and inflamed skin patches.",
+        "remedies": [
+            {
+                "name": "Coconut Oil & Vitamin E",
+                "benefit": "Deeply hydrates and restores skin barrier."
+            },
+            {
+                "name": "Oatmeal Bath",
+                "benefit": "Soothes intense itching and reduces redness."
+            },
+            {
+                "name": "Manuka Honey",
+                "benefit": "Natural antibacterial and healing agent."
+            }
+        ],
+        "tips": [
+            "Avoid harsh soaps.",
+            "Moisturize within 3 minutes of bathing."
+        ]
+    },
+    "psoriasis": {
+        "description": "Psoriasis causes skin cells to build up quickly, forming scales and itchy dry patches.",
+        "remedies": [
+            {
+                "name": "Dead Sea Salt Soak",
+                "benefit": "Removes scales and eases itching."
+            },
+            {
+                "name": "Aloe Vera & Garlic Oil",
+                "benefit": "Anti-inflammatory and reduces plaque thickness."
+            },
+            {
+                "name": "Apple Cider Vinegar Rinse",
+                "benefit": "Helps balance scalp pH and reduce scaling."
+            }
+        ],
+        "tips": [
+            "Limit bath time to 15 minutes.",
+            "Keep skin moist at all times."
+        ]
+    },
+    "fungal_infection": {
+        "description": "Fungal infections can cause red, itchy, scaly rashes in circular patterns.",
+        "remedies": [
+            {
+                "name": "Pure Neem Oil",
+                "benefit": "Strongest natural antifungal agent."
+            },
+            {
+                "name": "Garlic & Honey Paste",
+                "benefit": "Inhibits fungal growth and speeds up healing."
+            },
+            {
+                "name": "Turmeric & Curd Mask",
+                "benefit": "Natural antiseptic and cooling agent."
+            }
+        ],
+        "tips": [
+            "Keep the affected area dry.",
+            "Do not share personal items."
+        ]
+    },
+    "dark_spots": {
+        "description": "Hyperpigmentation or dark spots caused by sun damage or post-acne scars.",
+        "remedies": [
+            {
+                "name": "Potato Juice & Lemon",
+                "benefit": "Natural bleaching agents to lighten spots."
+            },
+            {
+                "name": "Papaya Pulp Mask",
+                "benefit": "Contains enzymes that exfoliate dark skin cells."
+            },
+            {
+                "name": "Sandalwood & Milk",
+                "benefit": "Evens out skin tone and cools inflammation."
+            }
+        ],
+        "tips": [
+            "Wear SPF 50+ daily.",
+            "Incorporate Vitamin C into your routine."
+        ]
+    }
+}

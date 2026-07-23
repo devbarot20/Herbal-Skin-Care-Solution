@@ -1,0 +1,124 @@
+{
+    "harmful_chemicals": [
+        {
+            "name": "Parabens (Methylparaben, Propylparaben)",
+            "risk": "High",
+            "reason": "Endocrine disruptor, mimics estrogen. Linked to breast cancer.",
+            "herbal_alt": "Grapefruit Seed Extract, Vitamin E oil"
+        },
+        {
+            "name": "Sodium Lauryl Sulfate (SLS)",
+            "risk": "Medium",
+            "reason": "Strips natural oils, causes dryness, irritation.",
+            "herbal_alt": "Soapnut (Reetha), Shikakai"
+        },
+        {
+            "name": "Synthetic Fragrance",
+            "risk": "High",
+            "reason": "Leading cause of allergies, headaches and respiratory issues.",
+            "herbal_alt": "Essential oils (Lavender, Rose), Vanilla extract"
+        },
+        {
+            "name": "Phthalates",
+            "risk": "High",
+            "reason": "Linked to reproductive damage, hormonal disruption.",
+            "herbal_alt": "Beeswax, Shea Butter"
+        },
+        {
+            "name": "Triclosan",
+            "risk": "High",
+            "reason": "Antimicrobial that may affect thyroid hormones.",
+            "herbal_alt": "Honey, Tea Tree Oil, Basil"
+        },
+        {
+            "name": "Formaldehyde",
+            "risk": "High",
+            "reason": "Known carcinogen; causes skin irritation and respiratory issues.",
+            "herbal_alt": "Rosemary extract, Neem oil"
+        },
+        {
+            "name": "Hydroquinone",
+            "risk": "High",
+            "reason": "Skin-lightening agent that can cause ochronosis and organ toxicity.",
+            "herbal_alt": "Turmeric, Liquorice root extract, Kojic acid (natural)"
+        },
+        {
+            "name": "Mineral Oil (Paraffinum Liquidum)",
+            "risk": "Medium",
+            "reason": "Clogs pores, prevents skin from breathing naturally.",
+            "herbal_alt": "Jojoba oil, Sweet almond oil"
+        },
+        {
+            "name": "Diethanolamine (DEA)",
+            "risk": "High",
+            "reason": "Can react to form nitrosamines, a known carcinogen.",
+            "herbal_alt": "Coconut-derived surfactants"
+        },
+        {
+            "name": "Oxybenzone",
+            "risk": "High",
+            "reason": "Chemical sunscreen linked to hormone disruption and coral reef damage.",
+            "herbal_alt": "Zinc oxide, Carrot seed oil (natural SPF)"
+        },
+        {
+            "name": "Lead (Pb)",
+            "risk": "Critical",
+            "reason": "Neurotoxin found in some lipsticks and hair dyes.",
+            "herbal_alt": "Beetroot pigment, Henna"
+        },
+        {
+            "name": "Toluene",
+            "risk": "High",
+            "reason": "Petrochemical solvent; affects nervous system and causes birth defects.",
+            "herbal_alt": "Water-based nail polishes, natural solvents"
+        },
+        {
+            "name": "Propylene Glycol",
+            "risk": "Medium",
+            "reason": "Skin irritant at high concentrations; allows deeper chemical penetration.",
+            "herbal_alt": "Vegetable glycerin, Aloe vera gel"
+        },
+        {
+            "name": "Benzophenone",
+            "risk": "High",
+            "reason": "UV filter linked to endocrine disruption and organ toxicity.",
+            "herbal_alt": "Raspberry seed oil, Shea butter (natural SPF)"
+        },
+        {
+            "name": "Coal Tar",
+            "risk": "Critical",
+            "reason": "Known carcinogen used in anti-dandruff shampoos and dark hair dyes.",
+            "herbal_alt": "Tea tree oil, Neem extract"
+        },
+        {
+            "name": "Butylated Hydroxyanisole (BHA)",
+            "risk": "High",
+            "reason": "Preservative classified as possible human carcinogen.",
+            "herbal_alt": "Vitamin E (Tocopherol), Rosemary extract"
+        },
+        {
+            "name": "Silicone (Dimethicone)",
+            "risk": "Low",
+            "reason": "Creates a barrier trapping dirt and bacteria; not easily biodegradable.",
+            "herbal_alt": "Argan oil, Aloe vera"
+        },
+        {
+            "name": "Ammonia",
+            "risk": "Medium",
+            "reason": "Harsh chemical in hair dyes causing scalp burns and respiratory irritation.",
+            "herbal_alt": "Henna, Indigo leaf, Amla"
+        },
+        {
+            "name": "Aluminum Compounds (Aluminium Chlorohydrate)",
+            "risk": "Medium",
+            "reason": "Used in antiperspirants; linked to breast cancer and Alzheimer's risk.",
+            "herbal_alt": "Crystal deodorant, Baking soda, Witch hazel"
+        },
+        {
+            "name": "Isopropyl Alcohol",
+            "risk": "Medium",
+            "reason": "Drying agent that strips skin of moisture and natural protection.",
+            "herbal_alt": "Witch hazel, Rose water"
+        }
+    ]
+}

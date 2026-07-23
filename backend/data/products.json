@@ -1,0 +1,278 @@
+{
+    "acne": [
+        {
+            "id": "acne-1",
+            "name": "Neem & Turmeric Purifying Face Wash",
+            "brand": "HerbHacks Naturals",
+            "tagline": "Deep cleanse. Zero breakouts.",
+            "description": "A powerful Ayurvedic face wash infused with pure neem leaf extract and wild turmeric root. Eliminates acne-causing bacteria, unclogs pores, and leaves skin visibly clearer within 7 days.",
+            "price": 299,
+            "original_price": 499,
+            "quantity_available": 48,
+            "rating": 4.7,
+            "reviews": 312,
+            "net_weight": "150ml",
+            "image_url": "/images/acne.png",
+            "gallery": [
+                "/images/acne.png"
+            ],
+            "ingredients": [
+                "Neem Leaf Extract",
+                "Turmeric Root",
+                "Aloe Vera",
+                "Tea Tree Oil"
+            ],
+            "benefits": [
+                "Kills 99% of acne-causing bacteria naturally",
+                "Reduces inflammation and redness in 3 days",
+                "Unclogs pores and prevents blackheads",
+                "Gentle enough for sensitive skin"
+            ],
+            "how_to_use": "Wet face. Apply a small amount and massage in circular motions for 60 seconds. Rinse thoroughly. Use twice daily."
+        },
+        {
+            "id": "acne-2",
+            "name": "Tea Tree Spot Correction Serum",
+            "brand": "HerbHacks Naturals",
+            "tagline": "Visible spot reduction overnight.",
+            "description": "A concentrated herbal serum with pure tea tree oil and willow bark extract. Targets active pimples, fades dark spots, and regulates sebum production for long-lasting clarity.",
+            "price": 449,
+            "original_price": 699,
+            "quantity_available": 31,
+            "rating": 4.8,
+            "reviews": 198,
+            "net_weight": "30ml",
+            "image_url": "/images/acne.png",
+            "gallery": [
+                "/images/acne.png"
+            ],
+            "ingredients": [
+                "Tea Tree Oil 5%",
+                "Salicylic Acid (Willow Bark)",
+                "Niacinamide",
+                "Centella Asiatica"
+            ],
+            "benefits": [
+                "Rapid spot treatment \u2014 works in 8 hours",
+                "Fades post-acne marks and hyperpigmentation",
+                "Anti-bacterial and antifungal protection",
+                "Oil-free, lightweight formula"
+            ],
+            "how_to_use": "Apply 2-3 drops directly on affected areas after cleansing. Use nightly. Avoid the eye area."
+        },
+        {
+            "id": "acne-3",
+            "name": "Aloe & Neem Clarifying Toner",
+            "brand": "HerbHacks Naturals",
+            "tagline": "Balance. Clarify. Glow.",
+            "description": "A balancing herbal toner with organic aloe vera and neem extract. Removes residual impurities, tightens pores, and prepares skin for better serum absorption.",
+            "price": 249,
+            "original_price": 399,
+            "quantity_available": 65,
+            "rating": 4.5,
+            "reviews": 87,
+            "net_weight": "100ml",
+            "image_url": "/images/acne.png",
+            "gallery": [
+                "/images/acne.png"
+            ],
+            "ingredients": [
+                "Organic Aloe Vera",
+                "Neem Extract",
+                "Witch Hazel",
+                "Green Tea Water"
+            ],
+            "benefits": [
+                "Minimizes pore appearance by 40%",
+                "Removes last traces of dirt and oil",
+                "Alcohol-free, non-drying formula",
+                "Preps skin for optimal serum absorption"
+            ],
+            "how_to_use": "After cleansing, soak a cotton pad and sweep gently across face and neck. Do not rinse. Follow with serum or moisturizer."
+        }
+    ],
+    "oily": [
+        {
+            "id": "oily-1",
+            "name": "Multani Mitti Oil-Control Face Pack",
+            "brand": "HerbHacks Naturals",
+            "tagline": "Matte skin. All day. Naturally.",
+            "description": "A traditional Ayurvedic clay mask with multani mitti and sandalwood powder. Deeply absorbs excess oil, tightens pores, and leaves skin beautifully matte for 8+ hours.",
+            "price": 349,
+            "original_price": 549,
+            "quantity_available": 52,
+            "rating": 4.6,
+            "reviews": 241,
+            "net_weight": "200g",
+            "image_url": "/images/oily.png",
+            "gallery": [
+                "/images/oily.png"
+            ],
+            "ingredients": [
+                "Fuller's Earth (Multani Mitti)",
+                "Sandalwood Powder",
+                "Rose Water",
+                "Kaolin Clay"
+            ],
+            "benefits": [
+                "Absorbs 3x more oil than regular clay masks",
+                "Tightens enlarged pores visibly",
+                "Prevents midday shine for 8+ hours",
+                "Soothes heat and skin irritation"
+            ],
+            "how_to_use": "Mix with rose water to a smooth paste. Apply evenly on face. Leave for 15 minutes. Rinse off with cool water. Use twice a week."
+        },
+        {
+            "id": "oily-2",
+            "name": "Green Tea Mattifying Moisturizer",
+            "brand": "HerbHacks Naturals",
+            "tagline": "Hydrate without the shine.",
+            "description": "An ultra-lightweight gel moisturizer with green tea antioxidants and zinc PCA. Hydrates oily skin without adding grease and controls sebum production.",
+            "price": 399,
+            "original_price": 599,
+            "quantity_available": 38,
+            "rating": 4.7,
+            "reviews": 156,
+            "net_weight": "50ml",
+            "image_url": "/images/oily.png",
+            "gallery": [
+                "/images/oily.png"
+            ],
+            "ingredients": [
+                "Green Tea Extract",
+                "Zinc PCA",
+                "Niacinamide",
+                "Hyaluronic Acid"
+            ],
+            "benefits": [
+                "Oil-free 24-hour hydration",
+                "Antioxidants fight pollution and UV damage",
+                "Regulates excess sebum naturally",
+                "Weightless gel texture, non-comedogenic"
+            ],
+            "how_to_use": "Apply a pea-sized amount on cleansed face. Massage gently until absorbed. Use morning and evening."
+        },
+        {
+            "id": "oily-3",
+            "name": "Lemon & Honey Pore Minimizing Scrub",
+            "brand": "HerbHacks Naturals",
+            "tagline": "Unclog. Brighten. Refine.",
+            "description": "A natural exfoliating scrub with lemon peel powder and raw honey that removes dead skin cells, clears clogged pores, and brightens dull oily skin with every use.",
+            "price": 279,
+            "original_price": 429,
+            "quantity_available": 74,
+            "rating": 4.4,
+            "reviews": 103,
+            "net_weight": "100g",
+            "image_url": "/images/oily.png",
+            "gallery": [
+                "/images/oily.png"
+            ],
+            "ingredients": [
+                "Lemon Peel Powder",
+                "Raw Honey",
+                "Gram Flour (Besan)",
+                "Turmeric"
+            ],
+            "benefits": [
+                "Gently exfoliates without micro-tears",
+                "Brightens and evens skin tone",
+                "Prevents ingrown hair and blackheads",
+                "Natural antibacterial action from honey"
+            ],
+            "how_to_use": "Apply on damp face in circular motions. Focus on nose and forehead. Rinse after 5 minutes. Use 2-3 times a week."
+        }
+    ],
+    "normal": [
+        {
+            "id": "normal-1",
+            "name": "Rose & Sandalwood Glow Cleanser",
+            "brand": "HerbHacks Naturals",
+            "tagline": "Preserve your natural glow.",
+            "description": "A luxury Ayurvedic gel cleanser with pure Bulgarian rose water and red sandalwood extract. Gently removes impurities while maintaining normal skin's perfect balance and natural radiance.",
+            "price": 329,
+            "original_price": 499,
+            "quantity_available": 60,
+            "rating": 4.8,
+            "reviews": 275,
+            "net_weight": "150ml",
+            "image_url": "/images/normal.png",
+            "gallery": [
+                "/images/normal.png"
+            ],
+            "ingredients": [
+                "Bulgarian Rose Water",
+                "Red Sandalwood",
+                "Aloe Vera",
+                "Vitamin C"
+            ],
+            "benefits": [
+                "Maintains optimal moisture balance",
+                "Enhances skin's natural radiance daily",
+                "Mild and gentle \u2014 safe for twice-daily use",
+                "Natural Vitamin C brightens skin tone"
+            ],
+            "how_to_use": "Lather in palms with water. Massage on wet face for 30 seconds. Rinse. Ideal for morning and evening."
+        },
+        {
+            "id": "normal-2",
+            "name": "Cucumber & Honey Hydrating Mist",
+            "brand": "HerbHacks Naturals",
+            "tagline": "Instant refresh. All-day dew.",
+            "description": "A refreshing facial mist with cold-pressed cucumber juice and mountain honey. Instantly rehydrates, soothes tired skin, and locks in moisture throughout the day.",
+            "price": 199,
+            "original_price": 349,
+            "quantity_available": 89,
+            "rating": 4.6,
+            "reviews": 321,
+            "net_weight": "100ml",
+            "image_url": "/images/normal.png",
+            "gallery": [
+                "/images/normal.png"
+            ],
+            "ingredients": [
+                "Cucumber Extract",
+                "Mountain Honey",
+                "Aloe Vera Water",
+                "Glycerine"
+            ],
+            "benefits": [
+                "Instantly cools and refreshes tired skin",
+                "Locks in moisture for 6+ hours",
+                "Use anytime \u2014 over makeup or bare skin",
+                "100% natural preservative system"
+            ],
+            "how_to_use": "Close eyes and mist 20-30cm from face. Pat gently to absorb. Use anytime throughout the day."
+        },
+        {
+            "id": "normal-3",
+            "name": "Coconut & Vitamin E Night Cream",
+            "brand": "HerbHacks Naturals",
+            "tagline": "Wake up to radiant skin.",
+            "description": "A rich overnight repair cream with virgin coconut oil and Vitamin E. Works while you sleep to deeply nourish, repair daily damage, and reveal softer, glowing skin every morning.",
+            "price": 499,
+            "original_price": 799,
+            "quantity_available": 27,
+            "rating": 4.9,
+            "reviews": 148,
+            "net_weight": "50g",
+            "image_url": "/images/normal.png",
+            "gallery": [
+                "/images/normal.png"
+            ],
+            "ingredients": [
+                "Virgin Coconut Oil",
+                "Vitamin E",
+                "Shea Butter",
+                "Jasmine Oil"
+            ],
+            "benefits": [
+                "Repairs daily skin damage while you sleep",
+                "Deep nourishment for soft, supple skin",
+                "Reduces fine lines and dullness overnight",
+                "Absorbs fully \u2014 no greasy residue"
+            ],
+            "how_to_use": "Apply a small amount on cleansed face and neck before bed. Massage gently in upward motions. Leave overnight."
+        }
+    ]
+}
